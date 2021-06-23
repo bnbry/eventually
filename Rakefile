@@ -8,7 +8,7 @@ RUBY_APPS = {
 
 task :boot do
   RUBY_APPS.each do |name, port|
-    Bundler.with_original_env { system("cd #{name} && bundle install && bundle exec rails db:setup") }
+    Bundler.with_original_env { system("cd #{name} && bundle install && yarn install && bundle exec rails db:setup") }
   end
 
   system("bundle exec foreman start")
