@@ -3,8 +3,8 @@ class AddSettingsTable < ActiveRecord::Migration[6.1]
     create_table :settings do |t|
       t.boolean :bar_enabled
       t.boolean :foo_enabled
-      t.string :version
-      t.string :settings_guid
+      t.integer :version
+      t.string :guid
 
       t.timestamps
     end

@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Setting.delete_all
+
+Setting.create([{
+  foo_enabled: true,
+  bar_enabled: false,
+  version: 1000,
+  guid: "guid-12345678"
+}])

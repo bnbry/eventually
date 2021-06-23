@@ -1,1 +1,20 @@
-<h3>Settings</h3>
+<h3>Alpha Settings</h3>
+
+<%= form_with model: @setting do |form| %>
+  <%= form.label :foo_enabled %>
+  <%= form.check_box :foo_enabled %>
+
+  <hr>
+
+  <%= form.label :bar_enabled %>
+  <%= form.check_box :bar_enabled %>
+
+  <hr>
+
+  <%= form.label :version %>
+  <%= @setting.version %>
+
+  <hr>
+
+  <%= form.submit %>
+<% end %>

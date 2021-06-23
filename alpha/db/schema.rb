@@ -15,8 +15,8 @@ ActiveRecord::Schema.define(version: 2021_06_23_043632) do
   create_table "settings", force: :cascade do |t|
     t.boolean "bar_enabled"
     t.boolean "foo_enabled"
-    t.string "version"
-    t.string "settings_guid"
+    t.integer "version"
+    t.string "guid"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
