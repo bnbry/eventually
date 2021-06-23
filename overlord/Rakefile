@@ -4,3 +4,14 @@
 require_relative "config/application"
 
 Rails.application.load_tasks
+
+namespace :events do
+  task :subscribe => :environment do
+    $redis.subscribe("settings-changes") do |on|
+      on.message do |channel, message|
+        Rails.logger.info("Broadcast on channel #{channel}")
+        SettingsSubscriber.call(message)
+      end
+    end
+  end
+end
