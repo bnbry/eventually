@@ -18,6 +18,10 @@
     </style>
   </head>
   <body>
+    <section>
+      <h1>Eventually</h1>
+      <p>Each pane below is a different application iframed into this page. The apps will attempt to load once they have booted below, you may experience errors while apps are booting, this page refreshes every 10 seconds to pick up updates</p>
+    </section>
     <section style="width: 25%; float: left;">
       <iframe src="http://localhost:3991/"></iframe>
     </section>
@@ -35,6 +39,6 @@
     </section>
   </body>
   <script>
-    window.setTimeout(function() { window.location.reload() }, 5000)
+    window.setTimeout(function() { window.location.reload() }, 10000)
   </script>
 </html>
