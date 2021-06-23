@@ -6,9 +6,13 @@
         box-sizing: border-box;
       }
 
+      section {
+        padding: 10px;
+      }
+
       section iframe {
         width: 100%;
-        height: 500px;
+        height: 250px;
         border: 5px solid violet;
       }
     </style>
@@ -30,4 +34,7 @@
       <iframe src="http://localhost:3995/"></iframe>
     </section>
   </body>
+  <script>
+    window.setTimeout(function() { window.location.reload() }, 5000)
+  </script>
 </html>
