@@ -1,0 +1,22 @@
+<h3>Beta Settings</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Enabled</th>
+      <th>Guid</th>
+      <th>Version</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @settings.each do |setting| %>
+      <tr>
+        <td><%= setting.name %></td>
+        <td><%= setting.enabled ? "yes" : "no" %></td>
+        <td><%= setting.settings_guid %></td>
+        <td><%= setting.version %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
