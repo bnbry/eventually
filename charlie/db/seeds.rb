@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Setting.delete_all
+
+Setting.create([
+  {
+    name: "foo",
+    status: "enabled",
+    guid: "guid-12345678",
+    version: 999,
+  }
+])
