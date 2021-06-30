@@ -2,8 +2,7 @@ RUBY_APPS = {
   alpha:    3991,
   beta:     3992,
   charlie:  3993,
-  delta:    3994,
-  overlord: 3995,
+  overlord: 3994,
 }
 
 task :boot do
