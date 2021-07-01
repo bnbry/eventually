@@ -7,10 +7,10 @@ Rails.application.load_tasks
 
 namespace :events do
   task :subscribe => :environment do
-    $redis.subscribe("settings-changes") do |on|
+    $redis.subscribe("eventually") do |on|
       on.message do |channel, message|
-        Rails.logger.info("Broadcast on channel #{channel}")
-        SettingsSubscriber.call(message)
+        puts("Broadcast on channel #{channel}")
+        UtilSubscriber.call(message)
       end
     end
   end

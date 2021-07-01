@@ -1,14 +1,17 @@
 class SettingsPublisher
   def self.call(setting)
-    $redis.publish(
-      "settings-changes",
-      {
-        version:     setting.version,
-        guid:        setting.guid,
-        foo_enabled: setting.foo_enabled,
-        bar_enabled: setting.bar_enabled,
-        timestamp:   Time.now.utc,
-      }.to_json
-    )
+    puts "no op"
+    # todo: change_events
+    # ::UtilPublisher.call(
+    #   {
+    #     event_name: "settings",
+    #     data: {
+    #       version:          setting.version,
+    #       guid:             setting.guid,
+    #       fee_enabled:      setting.fee_enabled,
+    #       discount_enabled: setting.discount_enabled,
+    #     }
+    #   }
+    # )
   end
 end

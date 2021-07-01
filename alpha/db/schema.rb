@@ -10,11 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_23_043632) do
+ActiveRecord::Schema.define(version: 2021_07_01_030446) do
+
+  create_table "orders", force: :cascade do |t|
+    t.string "cart_guid"
+    t.string "product"
+    t.integer "price"
+    t.string "guid"
+    t.integer "fee"
+    t.integer "discount"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "settings", force: :cascade do |t|
-    t.boolean "bar_enabled"
-    t.boolean "foo_enabled"
+    t.boolean "discount_enabled"
+    t.boolean "fee_enabled"
     t.integer "version"
     t.string "guid"
     t.datetime "created_at", precision: 6, null: false

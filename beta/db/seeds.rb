@@ -10,21 +10,33 @@ Setting.delete_all
 
 Setting.create([
   {
-    name: "foo",
+    name: "fee",
     settings_guid: "guid-12345678",
     enabled: true,
     version: 1000,
   },
   {
-    name: "bar",
+    name: "discount",
     settings_guid: "guid-12345678",
     enabled: false,
     version: 1000,
   },
   {
-    name: "baz",
+    name: "theme",
     settings_guid: "guid-12345678",
     enabled: false,
     version: 1000,
   }
+])
+
+Cart.destroy_all
+
+Cart.create([
+  {
+    price:    10,
+    product:  "widget",
+    fee:      false,
+    discount: false,
+    guid:     "cart-12345678"
+  },
 ])

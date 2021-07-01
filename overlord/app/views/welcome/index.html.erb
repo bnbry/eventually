@@ -1,1 +1,18 @@
-<h3>Overlord Settings</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Guid</th>
+      <th>Event Name</th>
+      <th>Data</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @messages.each do |message| %>
+      <tr>
+        <td><%= message.guid %></td>
+        <td><%= message.event_name %></td>
+        <td><%= message.data %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

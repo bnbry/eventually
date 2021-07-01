@@ -11,6 +11,10 @@
   </head>
 
   <body>
+    <header><a href="#" onclick="window.location.reload()">reload</a></header>
     <%= yield %>
   </body>
+  <script>
+    window.setTimeout(function() { window.location.reload() }, 500)
+  </script>
 </html>

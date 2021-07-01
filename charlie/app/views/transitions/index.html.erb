@@ -1,0 +1,21 @@
+<!-- todo: change_transition -->
+<table>
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Total</th>
+      <th>Fee Amount Included</th>
+      <!-- <th>Fee Status</th> -->
+      <th>Guid</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @order&.product %></td>
+      <td><%= @order&.total %></td>
+      <td><%= @order&.fee %></td>
+      <!-- <th>Setting.last.status</th> -->
+      <td><%= @order&.guid %></td>
+    </tr>
+  </tbody>
+</table>

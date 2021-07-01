@@ -10,9 +10,13 @@ Setting.delete_all
 
 Setting.create([
   {
-    name: "foo",
+    name: "fee",
     status: "enabled",
     guid: "guid-12345678",
     version: 999,
   }
 ])
+
+
+Order.delete_all
+Order.create

@@ -1,0 +1,38 @@
+
+<% if @order.present? %>
+  <%= form_with model: @order do |form| %>
+    <%= form.label :product %>
+    <%= @order.product %>
+
+    <hr>
+
+    <%= form.label :price %>
+    <%= @order.price %>
+
+    <hr>
+
+    <%= form.label :fee %>
+    <%= @order.fee %>
+
+    <hr>
+
+    <%= form.label :discount %>
+    <%= @order.discount %>
+
+    <hr>
+
+    <%= form.label :cart_guid %>
+    <%= @order.cart_guid %>
+
+    <hr>
+
+    <%= form.label :guid %>
+    <%= @order.guid %>
+
+    <hr>
+
+    <%= form.submit "Approve Order" %>
+  <% end %>
+<% else %>
+  Submit an order
+<% end %>

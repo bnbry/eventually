@@ -87,52 +87,51 @@
   </head>
   <body>
     <header class="full">
-      <h1>Eventually - Part of a presentation on event-driven systems</h1>
+      <h1>Eventually - Part of a presentation on message-driven systems</h1>
       <ul class="tabs">
-        <li><a href="#tab1">tab1</a></li>
-        <li><a href="#tab2">tab2</a></li>
+        <li><a href="#change">Change Event</a></li>
+        <li><a href="#transition">Transition Event</a></li>
       </ul>
     </header>
     <main>
-      <div id="tab1" class="page">
+      <div id="change" class="page">
         <section class="app">
-          <h2>Alpha</h2>
-          <iframe src="http://localhost:3991/"></iframe>
+          <h2>Beta - Capture Orders</h2>
+          <iframe src="http://localhost:3992/?pp=disable"></iframe>
         </section>
         <section class="app">
-          <h2>Beta</h2>
-          <iframe src="http://localhost:3992/"></iframe>
+          <h2>Alpha - Process Orders</h2>
+          <iframe src="http://localhost:3991/?pp=disable"></iframe>
         </section>
         <section class="app">
-          <h2>Charlie</h2>
-          <iframe src="http://localhost:3993/"></iframe>
+          <h2>Charlie - Charge Orders</h2>
+          <iframe src="http://localhost:3993/?pp=disable"></iframe>
         </section>
         <section class="overlord">
-          <h2>Overlord</h2>
-          <iframe src="http://localhost:3994/"></iframe>
+          <h2>Overlord - Watcher</h2>
+          <iframe src="http://localhost:3994/?pp=disable"></iframe>
         </section>
       </div>
-      <div id="tab2" class="page">
+
+
+      <div id="transition" class="page">
         <section class="app">
-          <h2>Alpha</h2>
-          <iframe src="http://localhost:3991/"></iframe>
+          <h2>Beta - Capture Orders</h2>
+          <iframe src="http://localhost:3992/transitions?pp=disable"></iframe>
         </section>
         <section class="app">
-          <h2>Beta</h2>
-          <iframe src="http://localhost:3992/"></iframe>
+          <h2>Alpha - Process Orders</h2>
+          <iframe src="http://localhost:3991/transitions?pp=disable"></iframe>
         </section>
         <section class="app">
-          <h2>Charlie</h2>
-          <iframe src="http://localhost:3993/"></iframe>
+          <h2>Charlie - Charge Orders</h2>
+          <iframe src="http://localhost:3993/transitions?pp=disable"></iframe>
         </section>
         <section class="overlord">
-          <h2>Overlord</h2>
-          <iframe src="http://localhost:3994/"></iframe>
+          <h2>Overlord - Watcher</h2>
+          <iframe src="http://localhost:3994?pp=disable"></iframe>
         </section>
       </div>
     </main>
   </body>
-  <script>
-    window.setTimeout(function() { window.location.reload() }, 10000)
-  </script>
 </html>

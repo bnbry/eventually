@@ -1,0 +1,28 @@
+<%= form_with model: @cart do |form| %>
+  <%= form.label :product %>
+  <%= form.text_field :product %>
+
+  <hr>
+
+  <%= form.label :price %>
+  <%= form.text_field :price %>
+
+  <hr>
+
+  <%= form.label :guid %>
+  <%= @cart.guid %>
+
+  <hr>
+
+  <% if @cart.fee? %>
+    <span>Your order will have a fee</span>
+    <hr>
+  <% end %>
+
+  <% if @cart.discount? %>
+    <span>Your order is discounted!</span>
+    <hr>
+  <% end %>
+
+  <%= form.submit "Submit Order" %>
+<% end %>

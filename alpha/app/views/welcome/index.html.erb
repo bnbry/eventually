@@ -1,18 +1,21 @@
-<h3>Alpha Settings</h3>
-
 <%= form_with model: @setting do |form| %>
-  <%= form.label :foo_enabled %>
-  <%= form.check_box :foo_enabled %>
+  <%= form.label :fee_enabled %>
+  <%= form.check_box :fee_enabled %>
 
   <hr>
 
-  <%= form.label :bar_enabled %>
-  <%= form.check_box :bar_enabled %>
+  <%= form.label :discount_enabled %>
+  <%= form.check_box :discount_enabled %>
 
   <hr>
 
   <%= form.label :version %>
   <%= @setting.version %>
+
+  <hr>
+
+  <%= form.label :guid %>
+  <%= @setting.guid %>
 
   <hr>
 

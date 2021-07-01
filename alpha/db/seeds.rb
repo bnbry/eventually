@@ -9,8 +9,10 @@
 Setting.delete_all
 
 Setting.create([{
-  foo_enabled: true,
-  bar_enabled: false,
+  fee_enabled: true,
+  discount_enabled: false,
   version: 1000,
   guid: "guid-12345678"
 }])
+
+Order.delete_all
