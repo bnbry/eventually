@@ -1,4 +1,3 @@
 Subscribers = {
-  settings: SettingsSubscriber,
-  finalized: OrderFinalizedSubscriber,
+  settings: SettingsSubscriber
 }

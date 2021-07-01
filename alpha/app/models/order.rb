@@ -2,6 +2,7 @@ class Order < ApplicationRecord
   def self.create_from_cart!(cart_data)
     guid = "order-#{(Time.zone.now.to_f * 1000).to_i}"
 
+    # TODO: transition_event
     if Setting.last.fee_enabled?
       fee = 25
     else

@@ -2,6 +2,16 @@
 
 An attempt at putting data into the right place while avoiding tight coupling.
 
+## how to run this project
+
+This project is a series of dummy apps built to facilitate a brown bag presentation on message passing and data locality with behavior. It includes 4 rails apps. To run this the easiest way is to clone the repo, cd into the directory, and run the following commands.
+
+`bundle install` to install the monorepos gems
+`bundle exec rake install` to install each child apps gems and setup DBs
+`bundle exec rake boot` to run each child apps servers and subscribers
+
+Then open `eventually.html` in a browser once the servers are started
+
 ## information
 
 These applications are barebones implementations in order to illustrate some ideas about organizing message based systems.
